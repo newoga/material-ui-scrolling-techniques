@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(//cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css);
+
+.row .no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+html, body, .full-height {
+  height: 100%;
+}
+
+main {
+  padding-top: 20px;
+}
+
+.container {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.container-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.spec {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spec-toolbar {
+  background-color: #2196F3;
+  min-height: 64px;
+}
+
+.spec-flexiblespace {
+  background-color: #EC407A;
+  min-height: 200px;
+}
+
+.spec-tabbar {
+  background-color: #AB47BC;
+  min-height: 48px;
+}
+
+.bg-blue {
+  background-color: #2196F3;
+}
+
+.bg-pink {
+  background-color: #EC407A;
+}
+
+.bg-purple {
+  background-color: #AB47BC;
+}

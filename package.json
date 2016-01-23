@@ -1,0 +1,44 @@
+{
+  "name": "material-ui-scrolling-techniques",
+  "version": "0.1.0",
+  "description": "Scrolling techniques from material design spec for material-ui",
+  "main": "./lib",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build:examples": "(cd examples && npm run build)",
+    "build:lib": "babel ./src --out-dir ./lib",
+    "build": "npm run build:lib && npm run build:examples",
+    "deploy": "(npm run build:docs && gh-pages -d examples/dist)",
+    "postinstall": "(cd examples && npm install)",
+    "start": "(cd examples && npm start)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/newoga/material-ui-scrolling-techniques.git"
+  },
+  "author": "Neil Gabbadon <neil.gabbadon@gmail.com> (http://github.com/newoga)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-plugin-babel": "^3.0.0",
+    "eslint-plugin-react": "^3.14.0",
+    "gh-pages": "^0.8.0",
+    "material-ui": "^0.14.2",
+    "react": "^0.14.6",
+    "react-addons-shallow-compare": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-tap-event-plugin": "^0.2.1",
+    "rimraf": "^2.5.0",
+    "webpack": "^1.12.11"
+  },
+  "peerDependencies": {
+    "material-ui": "^0.14.2",
+    "react-addons-shallow-compare": "^0.14.6"
+  }
+}

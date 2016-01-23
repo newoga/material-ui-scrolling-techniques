@@ -1,0 +1,40 @@
+{
+  "name": "material-ui-scrolling-techniques-examples",
+  "version": "0.0.0",
+  "description": "Examples site for material-ui-scrolling-techniques",
+  "author": "Neil Gabbadon <neil.gabbadon@gmail.com> (http://github.com/newoga)",
+  "license": "MIT",
+  "scripts": {
+    "build:webpack": "NODE_ENV=production webpack",
+    "prebuild": "npm install",
+    "build": "npm run clean && npm run build:webpack && cp index.html dist",
+    "clean": "rimraf dist",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "flexboxgrid": "^6.3.0",
+    "material-ui": "^0.14.2",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-remarkable": "^1.1.1",
+    "react-tap-event-plugin": "^0.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-react-transform": "^2.0.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "css-loader": "^0.23.1",
+    "express": "^4.13.4",
+    "react-transform-catch-errors": "^1.0.1",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.2.0",
+    "rimraf": "^2.5.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.11",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.6.0"
+  }
+}
