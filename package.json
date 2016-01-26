@@ -8,7 +8,7 @@
     "build:examples": "(cd examples && npm run build)",
     "build:lib": "babel ./src --out-dir ./lib",
     "build": "npm run build:lib && npm run build:examples",
-    "deploy": "(npm run build:docs && gh-pages -d examples/dist)",
+    "deploy": "(npm run build:examples && gh-pages -d examples/dist)",
     "postinstall": "(cd examples && npm install)",
     "start": "(cd examples && npm start)"
   },
