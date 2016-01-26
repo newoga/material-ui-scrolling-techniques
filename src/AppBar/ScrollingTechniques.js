@@ -119,11 +119,11 @@ class ScrollingTechniques extends Component {
     return [state.flexibleSpaceHeight, this.computeFixedOffset(state)];
   };
 
-  handleBlockRef = (key) => (elem, props) => {
-
+  registerBlock = (key, elem) => {
+    console.log(elem);
     this[key] = ReactDOM.findDOMNode(elem);
 
-    if (this.state[`${key}Height`] !== getHeight(elem)) {
+    if (elem && this.state[`${key}Height`] !== getHeight(elem)) {
      this.setState((previousState) => {
         const nextState = {
           ...previousState,
@@ -139,7 +139,6 @@ class ScrollingTechniques extends Component {
         };
       });
     }
-
   };
 
   render() {
@@ -149,24 +148,9 @@ class ScrollingTechniques extends Component {
       ...other,
     } = this.props;
 
-    const appBarProps = {
-      _appBarBlock: {
-        registerBlock: this.handleBlockRef('appBar'),
-      },
-      _flexibleSpaceBlock: {
-        registerBlock: this.handleBlockRef('flexibleSpace'),
-      },
-      _tabBarBlock: {
-        registerBlock: this.handleBlockRef('tabBar'),
-      },
-      _toolBarBlock: {
-        registerBlock: this.handleBlockRef('toolBar'),
-      },
-    };
-
     return (
       <div>
-        {React.cloneElement(children, {...other, ...appBarProps})}
+        {React.cloneElement(children, {...other, registerBlock: this.registerBlock})}
         <div ref="padding"></div>
       </div>
     );

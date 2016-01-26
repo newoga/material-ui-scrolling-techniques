@@ -40,5 +40,8 @@
   "peerDependencies": {
     "material-ui": "^0.14.2",
     "react-addons-shallow-compare": "^0.14.6"
+  },
+  "dependencies": {
+    "recompose": "^0.14.5"
   }
 }
