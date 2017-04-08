@@ -17,12 +17,12 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'material-ui-scrolling-techniques': path.join(__dirname, '..', 'src')
+      'material-ui-scrolling-techniques': path.join(__dirname, '..', 'lib')
     },
     modulesDirectories: [
       path.resolve(__dirname, 'node_modules'),
       'node_modules',
-      path.resolve(__dirname, '../src'),
+      path.resolve(__dirname, 'src'),
     ],
   },
   module: {
